@@ -1,0 +1,68 @@
+[
+  {
+    "id": "photo_3ddfa_v3",
+    "kind": "photo",
+    "module": "app.adapters.photo_3ddfa_v3",
+    "class": "Photo3DDFAV3",
+    "repo": "https://github.com/wang-zidu/3DDFA-V3",
+    "license": "MIT",
+    "commercial_ok": true,
+    "requires_gpu": false,
+    "priority": 10
+  },
+  {
+    "id": "photo_mediapipe",
+    "kind": "photo",
+    "module": "app.adapters.photo_mediapipe",
+    "class": "PhotoMediaPipe",
+    "repo": "https://github.com/google-ai-edge/mediapipe",
+    "license": "Apache-2.0",
+    "commercial_ok": true,
+    "requires_gpu": false,
+    "priority": 15
+  },
+  {
+    "id": "photo_3ddfa_v2",
+    "kind": "photo",
+    "module": "app.adapters.photo_3ddfa_v2",
+    "class": "Photo3DDFAV2",
+    "repo": "https://github.com/cleardusk/3DDFA_V2",
+    "license": "MIT",
+    "commercial_ok": true,
+    "requires_gpu": false,
+    "priority": 20
+  },
+  {
+    "id": "scan_upload",
+    "kind": "scan_upload",
+    "module": "app.adapters.scan_upload",
+    "class": "ScanUpload",
+    "repo": "https://github.com/mikedh/trimesh",
+    "license": "MIT",
+    "commercial_ok": true,
+    "requires_gpu": false,
+    "priority": 10
+  },
+  {
+    "id": "scan_colmap",
+    "kind": "scan_video",
+    "module": "app.adapters.scan_colmap",
+    "class": "ScanColmap",
+    "repo": "https://github.com/colmap/colmap",
+    "license": "BSD-3-Clause",
+    "commercial_ok": true,
+    "requires_gpu": false,
+    "priority": 10
+  },
+  {
+    "id": "scan_pycolmap",
+    "kind": "scan_video",
+    "module": "app.adapters.scan_pycolmap",
+    "class": "ScanPycolmap",
+    "repo": "https://github.com/colmap/pycolmap",
+    "license": "BSD-3-Clause",
+    "commercial_ok": true,
+    "requires_gpu": false,
+    "priority": 20
+  }
+]
