@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字人陪伴 · 建模原型</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>数字人陪伴 <span>建模原型</span></h1>
+      <div id="capabilities" class="caps">检查引擎中…</div>
+    </header>
+
+    <main>
+      <aside>
+        <section class="card">
+          <h2>1 · 照片建模</h2>
+          <p class="hint">单张正脸照，输出 low / standard 两档。</p>
+          <input id="photo-file" type="file" accept="image/*" />
+          <button id="photo-btn">生成头像</button>
+        </section>
+
+        <section class="card">
+          <h2>2 · 扫描件导入</h2>
+          <p class="hint">Polycam / Scaniverse 导出的 OBJ、GLB、PLY 或 ZIP。</p>
+          <input id="scan-file" type="file" accept=".obj,.glb,.gltf,.ply,.stl,.zip" />
+          <button id="scan-btn">导入并分档</button>
+        </section>
+
+        <section class="card">
+          <h2>3 · 环绕视频重建</h2>
+          <p class="hint">手机绕头部拍 30–60 秒，需安装 COLMAP。</p>
+          <input id="video-file" type="file" accept="video/*" />
+          <button id="video-btn">开始重建</button>
+        </section>
+
+        <section class="card">
+          <h2>任务</h2>
+          <ul id="jobs" class="jobs"></ul>
+        </section>
+
+        <section class="card">
+          <h2>资产</h2>
+          <ul id="avatars" class="avatars"></ul>
+        </section>
+      </aside>
+
+      <section id="viewer">
+        <canvas id="canvas"></canvas>
+        <div class="toolbar">
+          <span id="stats">未加载模型</span>
+          <div id="tiers" class="tiers"></div>
+          <label class="rotate"><input id="autorotate" type="checkbox" checked /> 自动旋转</label>
+          <button id="delete-btn" class="danger" hidden>删除</button>
+        </div>
+        <div id="empty" class="empty">
+          <p>上传一张照片或一个扫描件，模型会出现在这里。</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
